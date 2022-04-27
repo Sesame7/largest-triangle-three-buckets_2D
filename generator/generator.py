@@ -8,7 +8,7 @@ def signal_generator():
     min_y = 100
     max_x = 250
     min_x = 100
-    point_num = 2002
+    point_num = 1002
 
     random.seed(seed)
     prev_y = random.random()*(max_y-min_y)+min_y
