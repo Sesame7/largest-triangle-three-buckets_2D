@@ -6,6 +6,7 @@ def largest_triangle_three_buckets(data, threshold):
     bucket_size = (len(data) - 2) / (threshold - 2)
 
     a = 0
+    next_a = 0
     sampled = [data[0]]
 
     for i in range(0, threshold - 2):
@@ -40,8 +41,9 @@ def largest_triangle_three_buckets(data, threshold):
 
             if area > max_area:
                 max_area = area
-                a = n
+                next_a = n
 
+        a = next_a
         sampled.append(data[a])
 
     sampled.append(data[-1])
